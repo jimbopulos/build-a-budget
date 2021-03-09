@@ -4,8 +4,7 @@ const FILES_TO_CACHE = [
   "/manifest.webmanifest",
   "/styles.css",
   "/index.js",
-  "/routes/api.js",
-  "/models/transaction.js",
+  "/db.js",
   "https://cdn.jsdelivr.net/npm/chart.js@2.8.0",
   "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
   "/icons/icon-192x192.png",
@@ -57,10 +56,7 @@ self.addEventListener("fetch", (event) => {
   }
 
   // handle runtime GET requests for data from /api routes
-  if (
-    event.request.url.includes("/api/transaction") ||
-    event.request.url.includes("/api/transaction/bulk")
-  ) {
+  if (event.request.url.includes("/api/transaction")) {
     // make network request and fallback to cache if network request fails (offline)
     event.respondWith(
       caches.open(RUNTIME_CACHE).then((cache) => {
