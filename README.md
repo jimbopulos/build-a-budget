@@ -27,6 +27,8 @@ Navigate the deployed Heroku URL to begin.
 
 **Note** In the event that your server is down, and you need to use the application offline, you can still add transactions to your budget tracker. When connection is restored, your transaction list and chart will be updated.
 
+**Note** You may also download the app via the icon in the URL in the right most corner of the input area.
+
 ![Budget Tracker App](images/build-a-budget-app.png)
 
 ## Technologies
